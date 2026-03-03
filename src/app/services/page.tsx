@@ -2,55 +2,42 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Vendor Assessment",
-    subtitle: "Objective evaluation of technology vendors",
+    title: "Vendor Recommendation",
+    subtitle: "Find and select the right technology vendor",
     description:
-      "When you're selecting a technology vendor, the stakes are high. A poor choice can cost millions and set your organisation back years. 3RP's vendor assessment service gives you an objective, structured evaluation of competing vendors — based on your specific requirements, not generic analyst rankings.",
+      "Choosing the right technology vendor is one of the most consequential decisions your organisation will make. 3RP cuts through the market noise to recommend vendors that are genuinely the best fit — based on your requirements, your environment, and your long-term goals.",
     points: [
-      "Requirements definition and weighting",
-      "Vendor shortlisting and RFP management",
-      "Structured evaluation frameworks",
-      "Independent scoring and recommendation",
-      "Commercial and contract review support",
+      "Requirements definition and scoping",
+      "Vendor landscape research",
+      "Shortlisting and RFP management",
+      "Structured evaluation and recommendation",
+      "Comparative vendor analysis",
     ],
   },
   {
-    title: "Technology Advisory",
-    subtitle: "Strategic guidance on technology investments",
-    description:
-      "Technology decisions don't happen in isolation. They need to align with your business strategy, your existing architecture, and your organisational capability. 3RP provides strategic advisory services to help leadership teams navigate major technology decisions with confidence.",
-    points: [
-      "Technology strategy development",
-      "Architecture review and guidance",
-      "Build vs. buy analysis",
-      "Technology roadmap planning",
-      "Board and executive advisory",
-    ],
-  },
-  {
-    title: "Market Analysis",
+    title: "Market Research",
     subtitle: "Deep intelligence on technology markets",
     description:
-      "Understanding the technology market is essential before you enter it. 3RP conducts deep-dive market analysis to help organisations understand the vendor landscape, emerging technologies, and competitive dynamics relevant to their sector.",
+      "Before you can choose the right vendor, you need to understand the market. 3RP conducts deep-dive market research to map the vendor landscape, assess emerging technologies, and give your team the intelligence to make informed decisions.",
     points: [
       "Vendor landscape mapping",
       "Emerging technology assessment",
       "Market trend analysis",
-      "Competitive benchmarking",
+      "Category deep-dives",
       "Custom research reports",
     ],
   },
   {
-    title: "Due Diligence",
-    subtitle: "Technical due diligence for high-stakes decisions",
+    title: "Procurement Support",
+    subtitle: "End-to-end support through selection and procurement",
     description:
-      "Major investments — whether M&A, strategic partnerships, or large-scale technology procurement — require rigorous technical due diligence. 3RP provides independent assessment of technology assets, capabilities, and risks.",
+      "Selecting a vendor is only half the battle. 3RP supports your team through the entire procurement process — from defining evaluation criteria and managing RFPs to reviewing contracts and negotiating terms.",
     points: [
-      "Technology asset assessment",
-      "Architecture and code review",
-      "Security and compliance assessment",
-      "Team and capability review",
-      "Risk identification and mitigation",
+      "Evaluation framework design",
+      "RFP development and management",
+      "Vendor scoring and shortlisting",
+      "Contract and commercial review",
+      "Stakeholder reporting and sign-off support",
     ],
   },
 ];
@@ -66,7 +53,7 @@ export default function Services() {
           </span>
           <h1 className="text-5xl font-bold text-white mt-4 mb-6">What We Do</h1>
           <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-            Independent advisory services for organisations navigating complex technology decisions.
+            Vendor advocacy services for organisations navigating complex technology decisions.
           </p>
         </div>
       </section>

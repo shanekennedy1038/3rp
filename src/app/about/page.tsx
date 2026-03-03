@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const values = [
   {
-    title: "Independence",
-    desc: "We are not affiliated with any technology vendor. Our advice is genuinely objective.",
+    title: "Expertise",
+    desc: "We know the enterprise technology market deeply — the vendors, the categories, and what separates good solutions from great ones.",
   },
   {
     title: "Depth",
@@ -29,12 +29,12 @@ export default function About() {
             About 3RP
           </span>
           <h1 className="text-5xl font-bold text-white mt-4 mb-6 leading-tight">
-            Independent advisors for technology decisions that matter
+            Vendor advocates for technology decisions that matter
           </h1>
           <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-            3RP was founded with a single purpose: to give organisations in Australia access to
-            genuinely independent technology advice — the kind that isn&apos;t influenced by vendor
-            relationships or commercial incentives.
+            3RP was founded with a single purpose: to help organisations in Australia find and select
+            the right technology — guided by deep market knowledge and genuine expertise, not generic
+            analyst reports.
           </p>
         </div>
       </section>
@@ -50,12 +50,13 @@ export default function About() {
               <h2 className="text-3xl font-bold text-white mt-3 mb-6">Clarity in a complex market</h2>
               <p className="leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.65)" }}>
                 The enterprise technology market is crowded, noisy, and increasingly difficult to
-                navigate. Every vendor promises to be the best solution. Analysts and advisors are
-                often commercially tied to the vendors they assess.
+                navigate. Every vendor promises to be the best solution. 3RP exists to cut through
+                that noise.
               </p>
               <p className="leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-                3RP exists to cut through that noise. We work exclusively for the organisations that
-                engage us — not for technology vendors, not for resellers, not for integrators.
+                We know the vendors, we know the market, and we know what works for organisations
+                like yours. Our clients come to us when they need a technology recommendation they
+                can trust — backed by rigorous research and real enterprise experience.
               </p>
             </div>
             <div className="glass rounded-2xl p-8" style={{ border: "1px solid rgba(255,255,255,0.1)" }}>
@@ -132,7 +133,7 @@ export default function About() {
               },
               {
                 label: "How We Engage",
-                text: "We work on a project basis — scoped, time-bound engagements with clear deliverables. No retainers, no ongoing billing for advice you didn't ask for.",
+                text: "We work on a project basis — scoped engagements with clear deliverables and a recommendation you can act on.",
               },
               {
                 label: "Where We Operate",

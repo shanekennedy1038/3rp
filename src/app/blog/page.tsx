@@ -14,7 +14,7 @@ export default async function Blog() {
           </span>
           <h1 className="text-5xl font-bold text-white mt-4 mb-6">Articles &amp; Insights</h1>
           <p className="text-lg" style={{ color: "rgba(255,255,255,0.65)" }}>
-            Perspectives on technology assessment, vendor management, and strategic advisory from
+            Perspectives on vendor selection, technology markets, and enterprise procurement from
             the 3RP team.
           </p>
         </div>

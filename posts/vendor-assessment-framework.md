@@ -1,8 +1,8 @@
 ---
-title: "How to Build an Effective Vendor Assessment Framework"
+title: "How to Build an Effective Vendor Selection Framework"
 date: "2026-02-15"
-excerpt: "Most vendor assessments fail not because of bad vendors, but because of poorly defined requirements. Here's how to build a framework that actually works."
-category: "Vendor Assessment"
+excerpt: "Most vendor selections fail not because of bad vendors, but because of poorly defined requirements. Here's how to build a framework that actually works."
+category: "Vendor Recommendation"
 ---
 
 ## Why Most Vendor Assessments Fail
@@ -61,4 +61,4 @@ This is why many organisations engage an independent advisory firm to run their 
 
 ---
 
-*3RP conducts independent vendor assessments for enterprise and mid-market organisations across Australia. If you'd like to discuss your technology selection challenge, [get in touch](/contact).*
+*3RP helps enterprise and mid-market organisations across Australia find and select the right technology vendors. If you'd like to discuss your technology selection challenge, [get in touch](/contact).*

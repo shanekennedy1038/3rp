@@ -17,7 +17,7 @@ export default function Footer() {
               <span style={{ color: "#1661BE" }}>P</span>
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
-              Vendor assessment and technology advisory for enterprise and mid-market organisations in Australia.
+              Vendor advocacy and technology recommendation for enterprise and mid-market organisations in Australia.
             </p>
           </div>
 

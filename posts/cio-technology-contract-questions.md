@@ -2,7 +2,7 @@
 title: "5 Questions Every CIO Should Ask Before Signing a Technology Contract"
 date: "2026-01-20"
 excerpt: "Technology contracts are long-term commitments. Before you sign, make sure you've asked these five critical questions."
-category: "Technology Advisory"
+category: "Procurement Support"
 ---
 
 ## The Stakes Are High
@@ -60,4 +60,4 @@ You're not just buying what the product does today — you're buying into the ve
 
 ---
 
-*These questions are a starting point, not an exhaustive checklist. For high-stakes technology decisions, independent advisory support can help you ask the right questions and negotiate from a position of strength. [Talk to 3RP](/contact).*
+*These questions are a starting point, not an exhaustive checklist. For high-stakes technology decisions, vendor advocacy and procurement support can help you ask the right questions and negotiate from a position of strength. [Talk to 3RP](/contact).*

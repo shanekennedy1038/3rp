@@ -4,38 +4,32 @@ import { getPosts } from "@/lib/posts";
 const services = [
   {
     icon: "◈",
-    title: "Vendor Assessment",
+    title: "Vendor Recommendation",
     description:
-      "Objective, data-driven evaluation of technology vendors to help you choose the right fit — without the sales noise.",
+      "We research the market and recommend the best-fit technology vendors and software for your organisation's specific needs, budget, and environment.",
   },
   {
     icon: "◎",
-    title: "Technology Advisory",
+    title: "Market Research",
     description:
-      "Strategic guidance on technology investments, architecture decisions, and long-term roadmap planning.",
+      "Deep-dive research into technology markets, vendor landscapes, and emerging solutions relevant to your sector.",
   },
   {
     icon: "◉",
-    title: "Market Analysis",
+    title: "Procurement Support",
     description:
-      "Deep-dive research into technology markets, competitive landscapes, and emerging trends relevant to your sector.",
-  },
-  {
-    icon: "◇",
-    title: "Due Diligence",
-    description:
-      "Rigorous technical due diligence for M&A, major procurement decisions, and technology partnerships.",
+      "End-to-end support through the vendor selection and procurement process — from defining requirements through to contract.",
   },
 ];
 
 const stats = [
-  { value: "50+", label: "Assessments Completed" },
+  { value: "50+", label: "Engagements Completed" },
   { value: "10+", label: "Years Experience" },
-  { value: "100%", label: "Independent Advice" },
+  { value: "100%", label: "For Our Clients" },
 ];
 
 const differentiators = [
-  { title: "Vendor Neutral", desc: "No affiliations, no referral fees, no conflicts of interest." },
+  { title: "Market Expertise", desc: "Deep knowledge of enterprise technology vendors, categories, and what separates good solutions from great ones." },
   { title: "Enterprise Experience", desc: "Deep experience with large-scale procurement and enterprise architecture." },
   { title: "Australian Market Focus", desc: "Local knowledge of the Australian technology market and regulatory environment." },
   { title: "Practical Outcomes", desc: "Recommendations you can actually act on, not theoretical frameworks." },
@@ -57,14 +51,15 @@ export default async function Home() {
                 style={{ color: "rgba(255,255,255,0.6)" }}
               >
                 <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#1661BE" }} />
-                Vendor Assessment &amp; Technology Advisory
+                Vendor Advocacy &amp; Technology Recommendation
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
                 Make <span style={{ color: "#1661BE" }}>confident</span> technology decisions
               </h1>
               <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.65)" }}>
                 3RP helps enterprise and mid-market organisations in Australia cut through vendor
-                complexity and make smarter technology investments.
+                complexity and select the right technology — matched to your needs, your context,
+                and your goals.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -100,8 +95,7 @@ export default async function Home() {
               </div>
               <div className="glass rounded-2xl p-6">
                 <p className="text-sm italic leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
-                  &ldquo;We provide independent, objective advice — no vendor affiliations, no hidden
-                  incentives. Just the insight you need to decide with confidence.&rdquo;
+                  &ldquo;We champion the right technology vendors for your organisation — drawing on deep market knowledge and enterprise experience to give you recommendations you can act on.&rdquo;
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div
@@ -132,10 +126,10 @@ export default async function Home() {
             </span>
             <h2 className="text-4xl font-bold text-white mt-3">Our Services</h2>
             <p className="mt-4 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.55)" }}>
-              Independent advisory services built for organisations navigating complex technology decisions.
+              Vendor advocacy services built for organisations navigating complex technology decisions.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {services.map((service) => (
               <div
                 key={service.title}
@@ -168,10 +162,11 @@ export default async function Home() {
               <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: "#C74634" }}>
                 Why 3RP
               </span>
-              <h2 className="text-4xl font-bold text-white mt-3 mb-6">Independent advice you can trust</h2>
+              <h2 className="text-4xl font-bold text-white mt-3 mb-6">Expert advocacy you can rely on</h2>
               <p className="leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.65)" }}>
-                Unlike systems integrators or resellers, we have no financial relationship with any vendor.
-                Our only obligation is to give you the best possible advice.
+                We know the enterprise technology market inside out. Our recommendations are grounded in
+                real-world deployments, deep vendor knowledge, and a clear understanding of what works
+                for organisations like yours.
               </p>
               <Link
                 href="/about"

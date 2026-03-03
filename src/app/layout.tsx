@@ -12,9 +12,9 @@ const hind = Hind({
 });
 
 export const metadata: Metadata = {
-  title: "3RP | Vendor Assessment & Technology Advisory",
+  title: "3RP | Vendor Advocacy & Technology Recommendation",
   description:
-    "3RP helps enterprise and mid-market organisations in Australia make confident technology decisions through independent vendor assessment and strategic advisory.",
+    "3RP helps enterprise and mid-market organisations in Australia find and select the best technology vendors and software for their specific needs.",
 };
 
 export default function RootLayout({
