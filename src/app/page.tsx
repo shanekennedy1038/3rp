@@ -1,65 +1,272 @@
-import Image from "next/image";
+import Link from "next/link";
+import { getPosts } from "@/lib/posts";
 
-export default function Home() {
+const services = [
+  {
+    icon: "◈",
+    title: "Vendor Assessment",
+    description:
+      "Objective, data-driven evaluation of technology vendors to help you choose the right fit — without the sales noise.",
+  },
+  {
+    icon: "◎",
+    title: "Technology Advisory",
+    description:
+      "Strategic guidance on technology investments, architecture decisions, and long-term roadmap planning.",
+  },
+  {
+    icon: "◉",
+    title: "Market Analysis",
+    description:
+      "Deep-dive research into technology markets, competitive landscapes, and emerging trends relevant to your sector.",
+  },
+  {
+    icon: "◇",
+    title: "Due Diligence",
+    description:
+      "Rigorous technical due diligence for M&A, major procurement decisions, and technology partnerships.",
+  },
+];
+
+const stats = [
+  { value: "50+", label: "Assessments Completed" },
+  { value: "10+", label: "Years Experience" },
+  { value: "100%", label: "Independent Advice" },
+];
+
+const differentiators = [
+  { title: "Vendor Neutral", desc: "No affiliations, no referral fees, no conflicts of interest." },
+  { title: "Enterprise Experience", desc: "Deep experience with large-scale procurement and enterprise architecture." },
+  { title: "Australian Market Focus", desc: "Local knowledge of the Australian technology market and regulatory environment." },
+  { title: "Practical Outcomes", desc: "Recommendations you can actually act on, not theoretical frameworks." },
+];
+
+export default async function Home() {
+  const posts = await getPosts();
+  const recentPosts = posts.slice(0, 2);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section className="min-h-screen flex items-center pt-24 pb-16 px-6">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div
+                className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-sm mb-8"
+                style={{ color: "rgba(255,255,255,0.6)" }}
+              >
+                <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#1661BE" }} />
+                Vendor Assessment &amp; Technology Advisory
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+                Make <span style={{ color: "#1661BE" }}>confident</span> technology decisions
+              </h1>
+              <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.65)" }}>
+                3RP helps enterprise and mid-market organisations in Australia cut through vendor
+                complexity and make smarter technology investments.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 text-white font-semibold rounded-xl transition-all"
+                  style={{ background: "#C74634", boxShadow: "0 8px 32px rgba(199,70,52,0.25)" }}
+                >
+                  Talk to an Advisor
+                </Link>
+                <Link
+                  href="/services"
+                  className="px-8 py-4 glass text-white font-semibold rounded-xl transition-all"
+                  style={{ border: "1px solid rgba(255,255,255,0.2)" }}
+                >
+                  Our Services
+                </Link>
+              </div>
+            </div>
+
+            {/* Stats card */}
+            <div className="glass-strong rounded-3xl p-8">
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-3xl font-bold mb-1" style={{ color: "#1661BE" }}>
+                      {stat.value}
+                    </div>
+                    <div className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="glass rounded-2xl p-6">
+                <p className="text-sm italic leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
+                  &ldquo;We provide independent, objective advice — no vendor affiliations, no hidden
+                  incentives. Just the insight you need to decide with confidence.&rdquo;
+                </p>
+                <div className="mt-4 flex items-center gap-3">
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold"
+                    style={{ background: "rgba(22,97,190,0.2)", color: "#1661BE" }}
+                  >
+                    3RP
+                  </div>
+                  <div>
+                    <div className="text-white text-sm font-semibold">3RP Advisory</div>
+                    <div className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
+                      Melbourne, Australia
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Services */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: "#1661BE" }}>
+              What We Do
+            </span>
+            <h2 className="text-4xl font-bold text-white mt-3">Our Services</h2>
+            <p className="mt-4 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.55)" }}>
+              Independent advisory services built for organisations navigating complex technology decisions.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="glass rounded-2xl p-6 transition-all"
+                style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+              >
+                <div className="text-2xl font-bold mb-4" style={{ color: "#1661BE" }}>
+                  {service.icon}
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-3">{service.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/services" className="text-sm font-semibold" style={{ color: "#1661BE" }}>
+              View all services →
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Why 3RP */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="glass-strong rounded-3xl p-12 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: "#C74634" }}>
+                Why 3RP
+              </span>
+              <h2 className="text-4xl font-bold text-white mt-3 mb-6">Independent advice you can trust</h2>
+              <p className="leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.65)" }}>
+                Unlike systems integrators or resellers, we have no financial relationship with any vendor.
+                Our only obligation is to give you the best possible advice.
+              </p>
+              <Link
+                href="/about"
+                className="px-6 py-3 glass text-white font-semibold rounded-xl transition-all inline-block"
+                style={{ border: "1px solid rgba(255,255,255,0.2)" }}
+              >
+                About 3RP
+              </Link>
+            </div>
+            <div className="flex flex-col gap-4">
+              {differentiators.map((item) => (
+                <div
+                  key={item.title}
+                  className="glass rounded-xl p-4 flex gap-4 items-start"
+                  style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+                >
+                  <div className="w-2 h-2 rounded-full mt-2 shrink-0" style={{ background: "#1661BE" }} />
+                  <div>
+                    <div className="text-white font-semibold text-sm">{item.title}</div>
+                    <div className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.55)" }}>
+                      {item.desc}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Articles */}
+      {recentPosts.length > 0 && (
+        <section className="py-24 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex justify-between items-end mb-12">
+              <div>
+                <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: "#1661BE" }}>
+                  Insights
+                </span>
+                <h2 className="text-4xl font-bold text-white mt-3">Latest Articles</h2>
+              </div>
+              <Link href="/blog" className="text-sm font-semibold" style={{ color: "#1661BE" }}>
+                View all →
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {recentPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="glass rounded-2xl p-8 transition-all block"
+                  style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+                >
+                  <div className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "#1661BE" }}>
+                    {post.category || "Insights"}
+                  </div>
+                  <h3 className="text-white font-bold text-xl mb-3 leading-snug">{post.title}</h3>
+                  <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.55)" }}>
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
+                      {post.date}
+                    </span>
+                    <span className="text-sm font-semibold" style={{ color: "#1661BE" }}>
+                      Read more →
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* CTA */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-strong rounded-3xl p-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to make a confident technology decision?
+            </h2>
+            <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>
+              Speak with one of our advisors today. No commitment, no sales pitch — just a conversation.
+            </p>
+            <Link
+              href="/contact"
+              className="px-10 py-4 text-white font-bold text-lg rounded-xl transition-all inline-block"
+              style={{ background: "#C74634", boxShadow: "0 8px 32px rgba(199,70,52,0.25)" }}
+            >
+              Book a Free Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
