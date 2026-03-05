@@ -79,7 +79,7 @@ export default async function Home() {
               </div>
             </div>
 
-            {/* Stats card */}
+            {/* Stats card
             <div className="glass-strong rounded-3xl p-8">
               <div className="grid grid-cols-3 gap-6 mb-8">
                 {stats.map((stat) => (
@@ -112,7 +112,7 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
