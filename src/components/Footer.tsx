@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = ["About", "Services", "Blog", "Contact"];
 
@@ -12,9 +13,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="text-2xl font-bold text-white mb-4 tracking-tight">
-              3<span style={{ color: "#C74634" }}>R</span>
-              <span style={{ color: "#1661BE" }}>P</span>
+            <div className="mb-4">
+              <Image src="/3rp-logo.svg" alt="3RP" width={120} height={40} />
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
               Vendor advocacy and technology recommendation for enterprise and mid-market organisations in Australia.

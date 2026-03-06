@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -32,9 +33,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-white tracking-tight">
-          3<span style={{ color: "#C74634" }}>R</span>
-          <span style={{ color: "#1661BE" }}>P</span>
+        <Link href="/" className="flex items-center">
+          <Image src="/3rp-logo.svg" alt="3RP" width={90} height={30} priority />
         </Link>
 
         {/* Desktop nav */}
